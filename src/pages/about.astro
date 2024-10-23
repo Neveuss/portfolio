@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="À propos | Adam Boudaoud" description="Découvrez le parcours professionnel et les expériences d'Adam Boudaoud">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="À propos"
+				tagline="Merci de vous arrêter ici. Lisez ci-dessous pour en savoir plus sur moi et mon parcours."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="Adam Boudaoud au travail"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Parcours</h2>
+				<div class="content">
+					<p>
+						Actuellement, je suis alternant en informatique chez <strong>VusionGroup</strong>, spécialisé dans les solutions cloud pour le Retail IoT et les systèmes d'étiquetage électronique. Mes responsabilités incluent la gestion des tickets de niveaux 1 et 2 via ServiceNow, la configuration et l'installation des postes de travail, ainsi que le support utilisateur sur site, notamment avec les systèmes SAP et Salesforce. Je gère également l'inventaire du parc informatique, les licences et le service Help Desk.
+					</p>
+					<p>
+						En 2023, j'ai effectué un stage à la <strong>Banque Privée Edmond De Rothschild</strong> à Paris en tant qu'Assistant Responsable Informatique, où j'étais en charge de la configuration de switchs réseau, de la mise à jour du BIOS et de l'installation d'antivirus durant un stage de six semaines.
+					</p>
+					<p>
+						En 2022, j'ai acquis de l'expérience au <strong>Ministère de la Culture</strong>, où j'ai installé des équipements de visioconférence, effectué des sauvegardes de données, et maintenu le parc d'imprimantes et de smartphones du personnel pendant une période de sept semaines. Cette expérience a renforcé mes compétences en support technique et en dépannage informatique.
+					</p>
+					<p>
+						En 2021, j'ai également travaillé à la <strong>Banque Privée Edmond De Rothschild</strong>, où mes missions comprenaient l'installation de postes de travail, la mise à jour de logiciels, la sécurisation des systèmes, ainsi que la configuration des appareils Apple.
+					</p>
+					<p>
+						Ma première expérience professionnelle remonte à 2018, lors d'un stage d'observation d'une semaine chez <strong>Anyssa Solutions</strong> à Chatillon. Ce stage m'a permis de découvrir les bases de la cybersécurité, incluant l'intégration, les audits, et l'assistance technique.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Formation</h2>
+				<div class="content">
+					<p>
+						Je prépare actuellement un BTS SIO (Services Informatiques aux Organisations) en alternance, option Solutions d'Infrastructure, Systèmes et Réseaux, à <strong>Fénelon Sup</strong> (Paris 8). Auparavant, j'ai obtenu un BAC Pro Systèmes Numériques (option C : Réseaux Informatiques et Systèmes Communicants) au <strong>Lycée Privé Jean Baptiste La Salle</strong> à Saint Denis.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Compétences</h2>
+				<div class="content">
+					<p>
+						Compétences en support informatique, configuration réseau, installation de postes de travail, gestion des tickets (ServiceNow) et bases de la cybersécurité. Expérience avec les systèmes SAP et Salesforce, et assistance technique sur site.
+					</p>
+				</div>
+			</section>
+
+			<!-- Section Timeline -->
+			<section>
+				<h2 class="section-title">Parcours Professionnel</h2>
+				<div class="timeline-wrapper">
+					<div class="timeline">
+						<div class="timeline-item blue">
+							<div class="content">
+								<div class="year">2023 - Aujourd'hui</div>
+								<p>Alternant informatique BTS SIO - <strong>VusionGroup</strong>, Nanterre</p>
+								<ul>
+									<li>Solution cloud Retail IoT pour les étiquettes électroniques.</li>
+									<li>Gestion des tickets (niveaux 1 et 2) avec ServiceNow.</li>
+									<li>Installation et configuration des postes de travail.</li>
+									<li>Support utilisateurs sur site (SAP, Salesforce).</li>
+									<li>Inventaire du parc informatique.</li>
+									<li>Gestion des licences et Help Desk.</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="timeline-item purple">
+							<div class="content">
+								<div class="year">2023</div>
+								<p>Assistant Responsable Informatique - <strong>Banque Privée Edmond De Rothschild</strong>, Paris</p>
+								<p>(Stage de Tale, 6 semaines)</p>
+								<ul>
+									<li>Configuration d’un switch, mises à jour du BIOS, et installation d’antivirus.</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="timeline-item red">
+							<div class="content">
+								<div class="year">2022</div>
+								<p>Assistant Responsable Informatique - <strong>Ministère de la Culture</strong>, Paris</p>
+								<p>(Stage de 1ère, 7 semaines)</p>
+								<ul>
+									<li>Installation de matériel pour visioconférences et sauvegarde de données.</li>
+									<li>Maintenance du parc d'imprimantes et déploiement des smartphones pour les agents.</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="timeline-item yellow">
+							<div class="content">
+								<div class="year">2021</div>
+								<p>Assistant Informatique - <strong>Banque Privée Edmond De Rothschild</strong>, Paris</p>
+								<p>(Stage de 2nde, 6 semaines)</p>
+								<ul>
+									<li>Installations de matériels et postes utilisateurs.</li>
+									<li>Mises à jour de logiciels, dépannage, sécurisation des systèmes.</li>
+									<li>Mises à jour pour Apple et masterisation des postes.</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="timeline-item green">
+							<div class="content">
+								<div class="year">2018</div>
+								<p>Stage de Découverte en Sécurité Informatique - <strong>Anyssa Solutions</strong>, Chatillon</p>
+								<p>(Stage de 3ème, 1 semaine)</p>
+								<ul>
+									<li>Découverte de la cybersécurité : Intégration, audits, assistance technique.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.timeline-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+
+	.timeline {
+		position: relative;
+		width: 100%;
+		max-width: 800px;
+		padding: 20px 0;
+	}
+
+	.timeline::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 0;
+		width: 2px;
+		height: 100%;
+		background-color: #666;
+		transform: translateX(-50%);
+	}
+
+	.timeline-item {
+		display: flex;
+		margin: 20px 0;
+		width: calc(50% - 40px);
+		position: relative;
+	}
+
+	.timeline-item:nth-child(odd) {
+		justify-content: flex-end;
+		text-align: left;
+		padding-right: 20px;
+	}
+
+	.timeline-item:nth-child(even) {
+		justify-content: flex-start;
+		text-align: left;
+		padding-left: 20px;
+		left: 50%;
+	}
+
+	.timeline-item .content {
+		background-color: #2a2a2a;
+		padding: 15px;
+		border-radius: 10px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+		width: 100%;
+		position: relative;
+	}
+
+	.timeline-item::before {
+		content: "";
+		position: absolute;
+		top: 20px;
+		width: 12px;
+		height: 12px;
+		background-color: #666;
+		border-radius: 50%;
+		transform: translateX(-50%);
+		left: 50%;
+	}
+
+	ul {
+		margin: 10px 0;
+		padding-left: 20px;
+	}
+
+	ul li {
+		margin-bottom: 5px;
+		line-height: 1.5;
+	}
+</style>
