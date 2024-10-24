@@ -4,17 +4,17 @@ import Icon from './Icon.astro';
 
 <section class="box skills">
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<img src="/assets/computer1.png" alt="Support IT" width="60" height="60" class="icon-centered" />
 		<h2>Support IT</h2>
 		<p> Assistance technique aux utilisateurs et gestion des incidents via ServiceNow. </p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<img src="/assets/Network.png" alt="Technicien Réseau" width="60" height="60" class="icon-centered" />
 		<h2>Technicien Réseau</h2>
 		<p>Installation et maintenance de postes de travail, gestion des infrastructures réseau de base.</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<img src="/assets/Gestion.png" alt="Gestion Informatique" width="60" height="60" class="icon-centered" />
 		<h2>Gestion Informatique</h2>
 		<p> Inventaire du parc informatique, gestion des licences et suivi des ressources IT.</p>
 	</div>
@@ -41,6 +41,11 @@ import Icon from './Icon.astro';
 
 	.skills p {
 		color: var(--gray-400);
+	}
+
+	.icon-centered {
+		margin-bottom: 1rem;
+		object-fit: contain;
 	}
 
 	@media (min-width: 50em) {
