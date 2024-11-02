@@ -4,64 +4,64 @@ import Icon from './Icon.astro';
 
 <section class="box skills">
 	<div class="stack gap-2 lg:gap-4">
-		<img src="/assets/computer1.png" alt="Support IT" width="60" height="60" class="icon-centered" />
-		<h2>Support IT</h2>
-		<p> Assistance technique aux utilisateurs et gestion des incidents via ServiceNow. </p>
+	  <img src="/assets/computer1.png" alt="Support IT" width="60" height="60" class="icon-centered" />
+	  <h2>Support IT</h2>
+	  <p>Assistance technique aux utilisateurs et gestion des incidents via ServiceNow.</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<img src="/assets/Network.png" alt="Technicien Réseau" width="60" height="60" class="icon-centered" />
-		<h2>Technicien Réseau</h2>
-		<p>Installation et maintenance de postes de travail, gestion des infrastructures réseau de base.</p>
+	  <img src="/assets/Network.png" alt="Technicien Réseau" width="60" height="60" class="icon-centered" />
+	  <h2>Technicien Réseau</h2>
+	  <p>Installation et maintenance de postes de travail, gestion des infrastructures réseau de base.</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<img src="/assets/Gestion.png" alt="Gestion Informatique" width="60" height="60" class="icon-centered" />
-		<h2>Gestion Informatique</h2>
-		<p> Inventaire du parc informatique, gestion des licences et suivi des ressources IT.</p>
+	  <img src="/assets/Gestion.png" alt="Gestion Informatique" width="60" height="60" class="icon-centered" />
+	  <h2>Gestion Informatique</h2>
+	  <p>Inventaire du parc informatique, gestion des licences et suivi des ressources IT.</p>
 	</div>
-</section>
-
-<style>
+  </section>
+  
+  <style>
 	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
+	  border: 1px solid var(--gray-800);
+	  border-radius: 0.75rem;
+	  padding: 1.5rem;
+	  background-color: var(--gray-999_40);
+	  box-shadow: var(--shadow-sm);
 	}
-
+  
 	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
+	  display: flex;
+	  flex-direction: column;
+	  gap: 3rem;
 	}
-
+  
 	.skills h2 {
-		font-size: var(--text-lg);
+	  font-size: var(--text-lg);
 	}
-
+  
 	.skills p {
-		color: var(--gray-400);
+	  color: var(--gray-400);
 	}
-
+  
 	.icon-centered {
-		margin-bottom: 1rem;
-		object-fit: contain;
+	  margin-bottom: 1rem;
+	  object-fit: contain;
 	}
-
+  
 	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
-		}
-
-		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
-		}
-
-		.skills h2 {
-			font-size: var(--text-2xl);
-		}
+	  .box {
+		border-radius: 1.5rem;
+		padding: 2.5rem;
+	  }
+  
+	  .skills {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 5rem;
+	  }
+  
+	  .skills h2 {
+		font-size: var(--text-2xl);
+	  }
 	}
-</style>
+  </style>

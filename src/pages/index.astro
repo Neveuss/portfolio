@@ -171,7 +171,7 @@ const projects = (await getCollection('work'))
   </div>
 
 <script>
-  function openNestedDocs(event: MouseEvent) {
+  const openNestedDocs = (event: MouseEvent) => {
     event.preventDefault();
     const target = event.target;
 
@@ -185,7 +185,12 @@ const projects = (await getCollection('work'))
         }
       }
     }
-  }
+  };
+
+  // Attacher l'événement de clic à chaque lien de certification
+  document.querySelectorAll('.certification-card a').forEach((link) => {
+    link.addEventListener('click', openNestedDocs);
+  });
 </script>
 
 </BaseLayout>
