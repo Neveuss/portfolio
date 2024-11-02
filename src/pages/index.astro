@@ -22,6 +22,8 @@ const projects = (await getCollection('work'))
   .slice(0, 4);
 ---
 
+import BaseLayout from '../layouts/BaseLayout.astro';
+
 <BaseLayout>
   <div class="stack gap-20 lg:gap-48">
     <div class="wrapper stack gap-8 lg:gap-20">
@@ -31,10 +33,7 @@ const projects = (await getCollection('work'))
           tagline="ÉTUDIANT EN BTS SIO - OPTION SISR"
           align="start"
         >
-          <div class="roles roles-centered">
-
-
-          </div>
+          <div class="roles roles-centered"></div>
         </Hero>
 
         <img
@@ -58,45 +57,55 @@ const projects = (await getCollection('work'))
             Toutes ces connaissances ont été acquises de différentes façons. Elles ont été acquises durant mes études en BTS SIO et d'autres par ma propre initiative en essayant de mettre en place des solutions. J’ai également relevé les défis organisés, ce qui permet d’effectuer des recherches et aller encore plus loin.
           </p>
           <div class="tools-grid">
+            <!-- Tool Cards -->
             <div class="tool-card">
-              <img src="/assets/WINDOWS%20SERVEUR.png" alt="Windows Server" />
+              <img src="/assets/WINDOWS SERVEUR.png" alt="Windows Server" />
               <h3>Windows Server</h3>
             </div>
+
             <div class="tool-card">
               <img src="/assets/INTUNE.png" alt="Intune" />
               <h3>Intune</h3>
             </div>
+
             <div class="tool-card">
-              <img src="/assets/VMware-Symbol.jpg" alt="VMware" />
+              <img src="/assets/VMware-Symbole.png" alt="VMware" />
               <h3>VMware</h3>
             </div>
+
             <div class="tool-card">
               <img src="/assets/CISCO.jpg" alt="Cisco Packet Tracer" />
               <h3>Cisco Packet Tracer</h3>
             </div>
+
             <div class="tool-card">
               <img src="/assets/jaja.png" alt="Jamf" />
               <h3>Jamf</h3>
             </div>
+
             <div class="tool-card">
               <img src="/assets/ServiceNow-Logo.png" alt="ServiceNow" />
               <h3>ServiceNow</h3>
             </div>
+
             <div class="tool-card">
               <img src="/assets/linux-logo-2.png" alt="Linux" />
               <h3>Linux</h3>
             </div>
+
             <div class="tool-card">
               <img src="/assets/PuTTY_Icon.png" alt="PuTTY" />
               <h3>PuTTY</h3>
             </div>
+
             <div class="tool-card">
               <img src="/assets/Office-365-Logo-2013-2020.png" alt="Office 365" />
               <h3>Office 365</h3>
             </div>
+
             <div class="tool-card">
-              <img src="/assets/Microsoft-Azure.png" alt="Microsoft-Azure" />
-              <h3>Microsoft-Azure</h3>
+              <img src="/assets/Microsoft-Azure.png" alt="Microsoft Azure" />
+              <h3>Microsoft Azure</h3>
             </div>
           </div>
         </div>
@@ -112,14 +121,24 @@ const projects = (await getCollection('work'))
 
         <div class="gallery">
           <Grid variant="small">
+            <!-- Certification Jamf -->
             <li class="certification-card">
               <a href="/assets/Jamf.pdf" target="_blank">
                 <img src="/assets/Jamf1.png" alt="Certification Jamf" width="100" height="100" />
               </a>
             </li>
+
+            <!-- Certification ITIL V4 -->
             <li class="certification-card">
               <a href="/assets/ITILV4.pdf" target="_blank">
                 <img src="/assets/ITIL-4-FOUNDATION-LOGO.png" alt="Certification ITIL V4" width="100" height="100" />
+              </a>
+            </li>
+
+            <!-- Certification Data Legal Drive - Mise à jour pour rediriger vers 1.jpg -->
+            <li class="certification-card">
+              <a href="/assets/1.jpg" target="_blank">
+                <img src="/assets/data.png" alt="Certification IA & RGPD" width="120" height="120" />
               </a>
             </li>
           </Grid>
@@ -155,9 +174,34 @@ const projects = (await getCollection('work'))
 
     <ContactCTA />
   </div>
+
+<script>
+  function openNestedDocs(event) {
+    event.preventDefault();
+    const nestedDocs = event.target.closest('.certification-card').querySelector('.nested-certifications');
+    if (nestedDocs) {
+      nestedDocs.classList.toggle('hidden');
+    }
+  }
+</script>
+
 </BaseLayout>
 
 <style>
+  .hidden {
+    display: none;
+  }
+  .nested-certifications {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .nested-certifications a {
+    color: #0073e6;
+    text-decoration: underline;
+  }
+
   .hero {
     display: flex;
     flex-direction: column;
@@ -198,11 +242,10 @@ const projects = (await getCollection('work'))
     box-shadow: var(--shadow-md);
   }
 
-  /* Styles mis à jour pour la section des outils avec icônes agrandies et contours ronds */
   .tools {
     background-color: #1e1e1e;
     padding: 4rem 0;
-    border-radius: 1.5rem; /* Contours ronds de la section outils */
+    border-radius: 1.5rem; 
   }
 
   .tools .wrapper {
@@ -237,11 +280,10 @@ const projects = (await getCollection('work'))
 
   .tool-card {
     background: #2a2a2a;
- 
     padding: 2rem 1.5rem;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid #3e3e3e; /* Ajout d'une bordure pour mieux définir les cartes */
+    border: 2px solid #3e3e3e;
   }
 
   .tool-card:hover {
@@ -250,11 +292,10 @@ const projects = (await getCollection('work'))
   }
 
   .tool-card img {
-    width: 120px; /* Agrandissement de l'icône */
-    height: 120px; /* Agrandissement de l'icône */
+    width: 120px;
+    height: 120px;
     margin-bottom: 1rem;
     object-fit: contain;
-    
   }
 
   .tool-card h3 {
@@ -294,8 +335,6 @@ const projects = (await getCollection('work'))
       gap: 3rem;
     }
   }
-
-  /* ====================================================== */
 
   .section {
     display: grid;
@@ -375,8 +414,6 @@ const projects = (await getCollection('work'))
       grid-area: cta;
     }
   }
-
-  /* ====================================================== */
 
   .mention-card {
     display: flex;
