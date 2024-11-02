@@ -131,7 +131,7 @@ const projects = (await getCollection('work'))
               </a>
             </li>
 
-            <!-- Certification Data Legal Drive - Mise à jour pour rediriger vers 1.jpg -->
+            <!-- Certification Data Legal Drive -->
             <li class="certification-card">
               <a href="/assets/1.jpg" target="_blank">
                 <img src="/assets/data.png" alt="Certification IA & RGPD" width="120" height="120" />
@@ -170,28 +170,28 @@ const projects = (await getCollection('work'))
     <ContactCTA />
   </div>
 
-<script>
-  const openNestedDocs = (event: MouseEvent) => {
-    event.preventDefault();
-    const target = event.target;
+  <script is:inline lang="ts">
+    const openNestedDocs = (event: MouseEvent) => {
+      event.preventDefault();
+      const target = event.target;
 
-    // Vérifier si target est un HTMLElement avant de continuer
-    if (target instanceof HTMLElement) {
-      const certificationCard = target.closest('.certification-card');
-      if (certificationCard) {
-        const nestedDocs = certificationCard.querySelector('.nested-certifications');
-        if (nestedDocs) {
-          nestedDocs.classList.toggle('hidden');
+      // Vérifier si target est un HTMLElement avant de continuer
+      if (target instanceof HTMLElement) {
+        const certificationCard = target.closest('.certification-card');
+        if (certificationCard) {
+          const nestedDocs = certificationCard.querySelector('.nested-certifications');
+          if (nestedDocs) {
+            nestedDocs.classList.toggle('hidden');
+          }
         }
       }
-    }
-  };
+    };
 
-  // Attacher l'événement de clic à chaque lien de certification
-  document.querySelectorAll('.certification-card a').forEach((link) => {
-    link.addEventListener('click', openNestedDocs);
-  });
-</script>
+    // Attacher l'événement de clic à chaque lien de certification
+    document.querySelectorAll('.certification-card a').forEach((link) => {
+      link.addEventListener('click', openNestedDocs);
+    });
+  </script>
 
 </BaseLayout>
 
